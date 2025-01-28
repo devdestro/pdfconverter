@@ -40,7 +40,7 @@ body a {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
@@ -262,7 +262,11 @@ button {
 }
 @media (max-width: 768px) {
   .navbar {
-    display: none;
+    width: 100%;
+    margin-top: 36px;
+  }
+  .navbar-menu a {
+    font-size: 12px;
   }
 
   .App {
@@ -273,7 +277,7 @@ button {
 
   .App-header {
     width: 85%;
-    margin: 8px auto;
+    margin-top: 36px;
   }
 
   h1 {

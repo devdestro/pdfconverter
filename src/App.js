@@ -110,7 +110,6 @@ function App() {
           <a href='https://www.linkedin.com/in/yunus-emre-kuru-a33341217/' target='_blank'>linkedin</a>
           <a href='https://buymeacoffee.com/devdestro' target='_blank'>buymeacoffee</a>
         </div>
-        <a  href='#other' className='button'>other projects</a>
       </div>
       <header className="App-header">
         <h1>Easily convert 
