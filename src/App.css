@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --font-family: 'Inter', sans-serif;
+  --button-color: #F00;
+  --background-color: #000;
+  --text-color: #fff;
+  --box-shadow: 20px 20px 0px 0px rgba(255, 0, 0, 0.25);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.App {
+  min-height: 100vh;
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.App-header {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 48px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 18px;
+}
+
+.navbar-menu a {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+h1 {
+  color: #CFCFCF;
+  font-size: 48px;
+  font-weight: 500;
+  width: 100%;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.upload-section {
+  background: var(--background-color);
+  border: 1px solid #9F9F9F;
+  padding: 36px;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.upload-text {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+input[type="file"] {
+  border: 2px dashed #9F9F9F;
+  opacity: 0.8;
+  background: #000;
+  width: 100%;
+  height: 267px;
+  cursor: pointer;
+  position: relative;
+  color: transparent;
+  margin-top: 36px;
+  box-sizing: border-box;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+input[type="file"]::before {
+  content: "Drag and drop file here\A or";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #9F9F9F;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: pre;
+  text-align: center;
+}
+
+input[type="file"]::after {
+  content: "Choose File";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--button-color);
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+input[type="file"]:hover {
+  border-color: var(--text-color);
+  opacity: 1;
+}
+
+.settings-container {
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin-top: 24px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.format-control, 
+.jpeg-quality-control {
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  flex: 1;
+}
+
+label {
+  color: var(--text-color);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+select {
+  color: var(--text-color);
+  background: #000;
+  padding: 12px 78px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 24px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 200px;
+}
+
+button {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.convert-button {
+  padding: 10px 140px;
+  min-width: 260px;
+}
+
+.convert-button:hover {
+  background-color: #ff4a4a;
+  transform: translateY(-1px);
+}
+
+.images-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  justify-content: flex-start;
+}
+
+.image-container {
+  flex: 0 0 220px;
+  width: 220px;
+  max-width: 220px;
+  min-width: 220px;
+  background: white;
+  padding: 5px;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container img {
+  width: 210px;
+  height: 210px;
+  object-fit: contain;
+  background: #f5f5f5;
+}
+
+.image-container .download-button {
+  width: 210px;
+  min-width: 210px;
+  max-width: 210px;
+  padding: 4px 0;
+  font-size: 10px;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 4px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .settings-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .format-control, 
+  .jpeg-quality-control {
+    width: 100%;
+    justify-content: center;
+    min-width: unset;
+  }
+
+  .convert-button {
+    width: 100%;
+    min-width: unset;
+    padding: 10px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .App {
+    width: 100%;
+    padding: 0.5rem;
+    align-items: center;
+  }
+
+  .App-header {
+    width: 85%;
+    margin: 8px auto;
+  }
+
+  h1 {
+    font-size: 26px;
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+
+  .upload-text {
+    font-size: 20px;
+  }
+
+  .upload-section {
+    padding: 15px;
+    box-shadow: 10px 10px 0px 0px rgba(255, 0, 0, 0.25);
+  }
+
+  input[type="file"] {
+    height: 180px;
+  }
+
+  input[type="file"]::before {
+    font-size: 14px;
+    top: 35%;
+  }
+
+  input[type="file"]::after {
+    font-size: 14px;
+    top: 50%;
+  }
+
+  .settings-container {
+    flex-direction: column;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .format-control, 
+  .jpeg-quality-control {
+    flex-direction: column;
+    min-width: unset;
+    width: 100%;
+    gap: 8px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  select {
+    width: 80%;
+    margin: 0;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .convert-button {
+    width: 80%;
+    min-width: unset;
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .images-section {
+    justify-content: center;
+  }
+
+  .image-container {
+    flex: 0 0 95px;
+    width: 95px;
+    max-width: 95px;
+    min-width: 95px;
+  }
+
+  .image-container img {
+    width: 91px;
+    height: 91px;
+  }
+
+  .image-container .download-button {
+    width: 91px;
+    min-width: 91px;
+    max-width: 91px;
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    width: 80%;
+    margin: 6px auto;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin: 4px 0;
+  }
+
+  .image-container {
+    flex: 0 0 85px;
+    width: 85px;
+    max-width: 85px;
+    min-width: 85px;
+  }
+
+  .image-container img {
+    width: 81px;
+    height: 81px;
+  }
+
+  .image-container .download-button {
+    width: 81px;
+    min-width: 81px;
+    max-width: 81px;
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .App-header {
+    width: 75%;
+    margin: 4px auto;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin: 3px 0;
+  }
+
+  .image-container {
+    flex: 0 0 80px;
+    width: 80px;
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .image-container img {
+    width: 76px;
+    height: 76px;
+  }
+
+  .image-container .download-button {
+    width: 76px;
+    min-width: 76px;
+    max-width: 76px;
+    font-size: 6px;
+  }
+}
