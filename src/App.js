@@ -106,9 +106,9 @@ function App() {
     <div className="App">
       <div className='navbar'>
         <div className='navbar-menu'>
-          <a href='#github'>github</a>
-          <a href='#linkedin'>linkedin</a>
-          <a href='#buymeacoffee'>buymeacoffee</a>
+          <a href='https://github.com/devdestro' target='_blank'>github</a>
+          <a href='https://www.linkedin.com/in/yunus-emre-kuru-a33341217/' target='_blank'>linkedin</a>
+          <a href='https://buymeacoffee.com/devdestro' target='_blank'>buymeacoffee</a>
         </div>
         <a  href='#other' className='button'>other projects</a>
       </div>
